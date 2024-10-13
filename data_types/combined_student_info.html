@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Information</title>
+</head>
+<body>
+    <h1>Student Information</h1>
+    <div id="output"></div>
+
+    <script>
+        // Function to append text to the output div
+        function appendToOutput(text) {
+            document.getElementById('output').innerHTML += text + '<br>';
+        }
+
+        // task1.js content
+        let studentName = "John Doe";
+        let studentAge = 16;
+        let studentGrade = 10;
+        let isPresent = true;
+
+        let studentId = "S12345";
+        let dateOfBirth = "2007-05-15";
+        let gpa = 3.8;
+        let subjects = ["Math", "Science", "English", "History"];
+        let emergencyContact = {
+            name: "Jane Doe",
+            relation: "Mother",
+            phone: "555-1234"
+        };
+
+        appendToOutput("<h2>Task 1 Output:</h2>");
+        appendToOutput(`Student Name: ${studentName}`);
+        appendToOutput(`Student Age: ${studentAge}`);
+        appendToOutput(`Student Grade: ${studentGrade}`);
+        appendToOutput(`Is Present: ${isPresent}`);
+        appendToOutput(`Student ID: ${studentId}`);
+        appendToOutput(`Date of Birth: ${dateOfBirth}`);
+        appendToOutput(`GPA: ${gpa}`);
+        appendToOutput(`Subjects: ${subjects.join(", ")}`);
+        appendToOutput(`Emergency Contact: ${emergencyContact.name} (${emergencyContact.relation}) - ${emergencyContact.phone}`);
+
+        // task2.js content
+        appendToOutput("<h2>Task 2 Output:</h2>");
+        studentName = "Alice";
+        studentAge = 15;
+        studentGrade = 10;
+        isPresent = true;
+
+        appendToOutput(`Student Name: ${studentName}`);
+        appendToOutput(`Student Age: ${studentAge}`);
+        appendToOutput(`Student Grade: ${studentGrade}`);
+        appendToOutput(`Is Present: ${isPresent}`);
+
+        // task3.js content
+        appendToOutput("<h2>Task 3 Output:</h2>");
+        console.log = function(message) {
+            appendToOutput(message);
+        };
+
+        console.log("Student Name:", studentName);
+        console.log("Student Age:", studentAge);
+        console.log("Student Grade:", studentGrade);
+        console.log("Is Present:", isPresent);
+    </script>
+</body>
+</html>
